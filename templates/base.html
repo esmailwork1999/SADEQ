@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <style>
-      body{
-         background-image: url("{% static 'images/bg.jpg' %}");
+      body {
+        background-image: url("{% static 'images/bg.jpg' %}");
       }
     </style>
     <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
 
     <script src="{% static 'js/gsap.min.js' %}" defer></script>
     <script src="{% static 'js/ScrollTrigger.min.js' %}" defer></script>
-    <script src="{% static 'js/ScrollSmoother.min.js' %}" defer></script>
+    <!-- <script src="{% static 'js/ScrollSmoother.min.js' %}" defer></script> -->
 
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link
@@ -26,8 +26,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.min.css"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'images/favicon.png' %}"
+    />
     <script src="{% static 'js/app.js' %}" defer></script>
   </head>
-{% block content %}
-{% endblock %}
+  {% block content %} {% endblock %}
 </html>

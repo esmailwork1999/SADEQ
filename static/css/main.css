@@ -42,7 +42,7 @@
   will-change: transform;
 }
 body {
-  background-image: url(../img/bg.jpg);
+  background-image: url(../images/bg.jpg);
   background-size: 50px;
   color: #fafafa;
   font-family: raleway-c;

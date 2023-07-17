@@ -17,7 +17,6 @@ def filter_pictures(request, type, template_name):
         pictures = pictures.filter(title__icontains=title_filter)
     elif category_filter:
         pictures = pictures.filter(category__id=category_filter)
-
     paginator = Paginator(pictures, 7)
     page_number = request.GET.get('page')
     pictures_per_page = paginator.get_page(page_number)
@@ -30,7 +29,6 @@ def filter_pictures(request, type, template_name):
     for num in pictures_per_page.paginator.page_range:
         filter_params['page'] = num
         pagination_urls[num] = f"{base_url}?{filter_params.urlencode()}"
-
     context = {
         'pictures': pictures_per_page,
         'pagination_urls': pagination_urls,

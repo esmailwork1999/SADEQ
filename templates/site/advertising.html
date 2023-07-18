@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<body class="advertising">
+<body class="advertising ">
   <div class="wrapper">
     {% include 'includes/navbar.html' %}
     <div class="content">
@@ -81,18 +81,20 @@
       </div>
       <main class="studio gallery" id="studio">
         <div class="container p-0 m-0">
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="Name" name="title" id="title"
-                value="{{ request.GET.title }}" />
-              <label for="title" class="form__label">Search</label>
+            <div class="form">
+              <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Name" name="title" id="title"
+                  value="{{ request.GET.title }}" />
+                <label for="title" class="form__label">Search</label>
+              </div>
+              <select id = "category" name="category">
+                <option value="" disabled selected>Filter By Category</option>
+                {% for category in categories %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+              </select>
+              <button onclick="fetchPictures()">Search</button>
             </div>
-            <select id = "category" name="category">
-              <option value="" disabled selected>Filter By Category</option>
-              {% for category in categories %}
-              <option value="{{ category.id }}">{{ category.name }}</option>
-              {% endfor %}
-            </select>
-            <button onclick="fetchPictures()">Search</button>
         </div>
         <div class="container gallery__right">
           <!-- 7 items  -->
@@ -177,7 +179,7 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 <script>
 function fetchPictures() {
     var title = $('#title').val();

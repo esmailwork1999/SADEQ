@@ -1,3 +1,5 @@
+import translations from "./translations.js";
+
 gsap.registerPlugin(ScrollTrigger);
 
 if (ScrollTrigger.isTouch !== 2) {
@@ -90,3 +92,78 @@ let linksMenu = document.querySelector(".links");
 bars.addEventListener("click", () => {
   linksMenu.classList.toggle("active");
 });
+// Dark Light Toggler 
+const modeToggler = document.querySelector(".mode")
+const bodyEl =  document.body
+modeToggler.addEventListener("click", ()=>{
+  toggleClasses(bodyEl)
+})
+window.addEventListener("load", ()=>{
+  const mode = localStorage.getItem("mode") || "dark"
+  if (mode === "light") {
+    bodyEl.classList.remove("dark")
+    bodyEl.classList.add("light")
+    modeToggler.innerHTML =` <i class="fa-regular fa-moon"></i>`
+  }else{
+    bodyEl.classList.remove("light")
+    bodyEl.classList.add("dark")
+    modeToggler.innerHTML =` <i class="fa-regular fa-sun"></i>`
+  }
+})
+const toggleClasses = (bodyEl)=>{
+  if(bodyEl.classList.contains("dark")){
+    bodyEl.classList.remove("dark")
+    bodyEl.classList.add("light")
+    modeToggler.innerHTML =` <i class="fa-regular fa-moon"></i>`
+    localStorage.setItem("mode" , "light")
+  } else
+  {
+    bodyEl.classList.remove("light")
+    bodyEl.classList.add("dark") 
+    modeToggler.innerHTML =` <i class="fa-regular fa-sun"></i>`
+    localStorage.setItem("mode" , "dark")
+}
+  
+}
+//Language 
+const setLanguage = (language) => {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach((element) => {
+    const translationKey = element.getAttribute("data-i18n");
+    element.textContent = translations[language][translationKey];
+  });
+  document.dir = language === "ar" ? "rtl" : "ltr";
+};
+const langBtns = document.querySelectorAll(".language")
+langBtns.forEach(btn=>{
+  btn.addEventListener("click",  toggleLang)
+})
+function toggleLang()
+{
+  const lang = document.documentElement.getAttribute("lang")
+  if (lang === "en") {
+    document.documentElement.setAttribute("lang" , "ar")
+    localStorage.setItem("lang" , "ar")
+    setLanguage("ar")
+  }else
+  {
+    document.documentElement.setAttribute("lang" , "en")
+    localStorage.setItem("lang" , "en")
+    setLanguage("en")
+    
+  }
+  
+}
+window.addEventListener("load", ()=>{
+  const lang = localStorage.getItem("lang") || "en" 
+  if (lang ==="en") {
+    document.documentElement.setAttribute("lang" , "en")
+    localStorage.setItem("lang" , "en")
+    setLanguage("en")
+  }else{
+    document.documentElement.setAttribute("lang" , "ar")
+    localStorage.setItem("lang" , "ar")
+    setLanguage("ar")
+   }
+ 
+})

@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<body>
+<body class="">
   <div class="wrapper">
     {% include 'includes/navbar.html' %}
     <div class="content">
@@ -10,12 +10,14 @@
         <img data-speed=".6" class="hero" src="{% static 'images/bg1.jpg' %}" alt="Alt" />
         <div class="container">
           <div data-speed=".75" class="main-header">
-            <h1 class="main-title">
-              <span> All In </span>
+            <div class="main-box">
+              <span data-i18n="allSpan"> All In </span>
+            <h1 class="main-title" data-i18n="all">
               One <br />Group
 
-              <span class="logo-name"> Sadeq </span>
             </h1>
+            <span class="logo-name"> Sadeq </span>
+            </div>
           </div>
         </div>
       </header>
@@ -25,8 +27,8 @@
           <main class="gallery space-0-t space-0">
             <div data-speed="1.5" class="gallery__left">
               <div class="text-block gallery__item">
-                <h2 class="text-block__h">ABOUT US</h2>
-                <p class="text-block__p">
+                <h2 class="text-block__h"  data-i18n="aboutUs" >ABOUT US</h2>
+                <p class="text-block__p"  data-i18n="aboutUsP">
                   SADEQ consists of several brands which cover all sectors of
                   the world of architecture and advertising services in many
                   countries. The idea of SADEQ is to make you relate with only
@@ -41,8 +43,8 @@
             <div data-speed="1.5" class="gallery__left"></div>
             <div class="gallery-right">
               <div class="text-block gallery__item">
-                <h2 class="text-block__h">Mission</h2>
-                <p class="text-block__p">
+                <h2 class="text-block__h"  data-i18n="mission">Mission</h2>
+                <p class="text-block__p"  data-i18n="missionP">
                   We aim to turn your dreams into reality. we take care of all
                   your details starting from planning to the final product.
                 </p>
@@ -52,8 +54,8 @@
           <main class="gallery space-0">
             <div data-speed="1.5" class="gallery__left">
               <div class="text-block gallery__item">
-                <h2 class="text-block__h">Vision</h2>
-                <p class="text-block__p">
+                <h2 class="text-block__h"  data-i18n="vision">Vision</h2>
+                <p class="text-block__p"  data-i18n="visionP">
                   We seek to spread internationally more and more and to be
                   the best international one-of-a-kind multi-services company
                   through our unique and accurate projects that cover all your
@@ -166,14 +168,16 @@
                   </div>
                 </li>
               </ul>
-            </main> -->
-          <main class="timeline gallery">
+            </main> --> 
+          <main class="timeline gallery" dir="ltr">
             <div class="outer gallery__left">
               <div class="card gallery__item">
                 <div class="info">
                   <h3 class="title">
                     <div class="year">2018</div>
-                    Mansoura
+                <span  data-i18n="mansoura">
+                  Mansoura
+                </span> 
                   </h3>
                   <!-- <p>We began in , Egypt</p> -->
                 </div>
@@ -190,7 +194,10 @@
                 <div class="info">
                   <h3 class="title">
                     <div class="year">2020</div>
-                    Cairo
+                    <span  data-i18n="cairo">
+
+                      Cairo
+                    </span>
                   </h3>
                   <!-- <p>We have our second branch in Cairo, Egypt.</p> -->
                 </div>
@@ -207,7 +214,9 @@
                 <div class="info">
                   <h3 class="title">
                     <div class="year">2022</div>
-                    Dubai
+                    <span  data-i18n="dubai">
+                      Dubai
+                    </span>
                   </h3>
                 </div>
               </div>
@@ -215,19 +224,22 @@
                 <div class="info">
                   <h3 class="title">
                     <div class="year">2023</div>
-                    Riyadh
+                    <span  data-i18n="riyadh">
+
+                      Riyadh
+                    </span>
                   </h3>
                   <!-- <p>we are in Riyadh, KSA.</p> -->
                 </div>
               </div>
             </div>
           </main>
-          <main class="gallery icons-section">
+          <main class="gallery icons-section" dir="ltr">
             <div class="iconscontainer gallery__right">
               <!-- Icon -->
               <div class="icon gallery__item">
                 S
-                <span>Stability</span>
+                <span  data-i18n="stability">Stability</span>
                 <div class="vertical-line"></div>
 
                 <!-- <div class="arrow">
@@ -239,7 +251,7 @@
               <div class="icon gallery__item">
                 A
 
-                <span> Accuracy</span>
+                <span data-i18n="accuracy"> Accuracy</span>
                 <!-- <div class="arrow">
                     <div class="curve"></div>
                     <div class="point"></div>
@@ -249,7 +261,7 @@
               <!-- Icon -->
               <div class="icon gallery__item">
                 D
-                <span> Dependable</span>
+                <span data-i18n="dependable"> Dependable</span>
                 <!-- <div class="arrow">
                     <div class="curve"></div>
                     <div class="point"></div>
@@ -259,7 +271,7 @@
               <!-- Icon -->
               <div class="icon gallery__item">
                 E
-                <span>Enhancing</span>
+                <span data-i18n="enhancing">Enhancing</span>
                 <!-- <div class="arrow">
                     <div class="curve"></div>
                     <div class="point"></div>
@@ -269,7 +281,7 @@
               <!-- Icon -->
               <div class="icon gallery__item">
                 Q
-                <span> Quality</span>
+                <span data-i18n="quality"> Quality</span>
                 <!-- <div class="arrow">
                     <div class="curve"></div>
                     <div class="point"></div>
@@ -307,13 +319,13 @@
               </div>
             </div>
 
-            <p>All rights reserved by Sadeq Group © 2023</p>
+            <p data-i18n="footer">All rights reserved by Sadeq Group © 2023</p>
           </div>
         </div>
       </footer>
     </div>
   </div>
 
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 </body>
 {% endblock %}

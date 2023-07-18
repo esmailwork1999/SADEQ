@@ -10,12 +10,14 @@
                 <img data-speed=".6" class="hero" src="{% static 'images/bg1.jpg' %}" alt="Alt" />
                 <div class="container">
                     <div data-speed=".75" class="main-header">
-                        <h1 class="main-title">
-                            <span> All In </span>
+                        <div class="main-box">
+                            <span data-i18n="allSpan"> All In </span>
+                          <h1 class="main-title" data-i18n="all">
                             One <br />Group
-
-                            <span class="logo-name"> Sadeq </span>
-                        </h1>
+              
+                          </h1>
+                          <span class="logo-name"> Sadeq </span>
+                          </div>
                     </div>
                 </div>
             </header>
@@ -23,57 +25,60 @@
             <div class="portfolio">
                 <div class="container">
                     <main class="gallery services">
-                        <h2>Architecture Services</h2>
+                        <h2 data-i18n="archServices">Architecture Services</h2>
                         <div data-speed=".9" class="gallery__left">
                             <ol>
+                                 <!-- item -->
+                                 <li class="gallery__item">
+                                    <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
+                                    <div class="title" data-i18n="archService1">Interior Design</div>
+                                    <div class="descr"></div>
+                                </li>
+                                 <!-- item -->
+                                 <li class="gallery__item">
+                                    <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
+                                    <div class="title" data-i18n="archService2">Exterior Design</div>
+                                    <div class="descr"></div>
+                                </li>
+                                         <!-- item -->
+                                         <li class="gallery__item">
+                                            <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
+                                            <div class="title" data-i18n="archService3">Architectural Planning</div>
+                                            <div class="descr"></div>
+                                        </li>
+                                        <!-- item -->
+                                        <li class="gallery__item">
+                                            <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
+                                            <div class="title" data-i18n="archService4">Smart Homes Services</div>
+                                            <div class="descr"></div>
+                                        </li>
+                                       
                                 <!-- item -->
                                 <li class="gallery__item">
                                     <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">Furnishing, Modeling , and Styling</div>
+                                    <div class="title" data-i18n="archService5">Furnishing, Modeling , and Styling</div>
                                     <div class="descr"></div>
                                 </li>
                                 <!-- item -->
                                 <li class="gallery__item">
                                     <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">Furnishing, Renovation , and Repair</div>
+                                    <div class="title" data-i18n="archService6">Furnishing, Renovation , and Repair</div>
                                     <div class="descr"></div>
                                 </li>
                                 <!-- item -->
                                 <li class="gallery__item">
                                     <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">Construction, and Execution</div>
+                                    <div class="title" data-i18n="archService7">Construction, and Execution</div>
                                     <div class="descr"></div>
                                 </li>
                                 <!-- item -->
                                 <li class="gallery__item">
                                     <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">LandScape, and HardScape</div>
+                                    <div class="title" data-i18n="archService8">LandScape, and HardScape</div>
                                     <div class="descr"></div>
                                 </li>
-                                <!-- item -->
-                                <li class="gallery__item">
-                                    <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">Architectural Planning</div>
-                                    <div class="descr"></div>
-                                </li>
-                                <!-- item -->
-                                <li class="gallery__item">
-                                    <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">Smart Homes Services</div>
-                                    <div class="descr"></div>
-                                </li>
-                                <!-- item -->
-                                <li class="gallery__item">
-                                    <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">Exterior Design</div>
-                                    <div class="descr"></div>
-                                </li>
-                                <!-- item -->
-                                <li class="gallery__item">
-                                    <div class="icon"><i class="fa-solid fa-sitemap"></i></div>
-                                    <div class="title">Interior Design</div>
-                                    <div class="descr"></div>
-                                </li>
+                       
+                               
                             </ol>
                         </div>
                     </main>
@@ -86,15 +91,15 @@
                             <div class="form__group field">
                                 <input type="input" class="form__field" placeholder="Name" name="title" id="title"
                                     value="{{ request.GET.title }}" />
-                                <label for="title" class="form__label">Search</label>
+                                <label for="title" class="form__label" data-i18n="search">Search</label>
                             </div>
                             <select id = "category" name="category">
-                                <option value="" disabled selected>Filter By Category</option>
+                                <option value="" disabled selected data-i18n="fbCategory">Filter By Category</option>
                                 {% for category in categories %}
                                 <option  value="{{ category.id }}">{{ category.name }}</option>
                                 {% endfor %}
                             </select>
-                            <button onclick="fetchPictures()">Search</button>
+                            <button onclick="fetchPictures()" data-i18n="search">Search</button>
                         </div>
                 </div>
                 <div class="container gallery__right">

@@ -108,7 +108,7 @@
           {% endfor %}
         </div>
         <div class="container p-0 m-0">
-          <ul class="page">
+          <ul class="page" dir="ltr">
             <li class="page__btn">
               {% if pictures.has_previous %}
               <a href="?{% if request.GET.title %}title={{ request.GET.title }}{% endif %}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}&page={{ pictures.previous_page_number }}"
@@ -120,7 +120,7 @@
 
             {% for num in pictures.paginator.page_range %}
             {% if pictures.number == num %}
-            <li class="page__numbers active">{{ num }}</li>
+            <li  class="page__numbers active">{{ num }}</li>
             {% else %}
             <a href="?{% if request.GET.title %}title={{ request.GET.title }}{% endif %}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}&page={{ num }}"
               style="color: white; text-decoration: none;">

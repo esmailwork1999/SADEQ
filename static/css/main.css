@@ -14,7 +14,7 @@
     url("//db.onlinewebfonts.com/t/d461c89ddda0ee0e6493f1cc55e60d4e.svg#Perpetua Titling MT")
       format("svg");
 }
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -51,10 +51,8 @@ body {
   font-family: "Open Sans", sans-serif;
   --primary-color: #d4ebff;
 }
-html[lang="ar"] body
-{
-  font-family: 'Cairo', sans-serif;
-
+html[lang="ar"] body {
+  font-family: "Cairo", sans-serif;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -120,22 +118,19 @@ body {
   backdrop-filter: blur(20px);
   cursor: pointer;
 }
-.navbar .links button.language{
+.navbar .links button.language {
   display: none;
 }
 .navbar .links #google_translate_element select,
-.navbar .links #google_translate_element1 select
-{
+.navbar .links #google_translate_element1 select {
   display: none;
 }
-.navbar .box
-{
+.navbar .box {
   display: flex;
   align-items: center;
-  gap:10px
+  gap: 10px;
 }
-.navbar .box .mode
-{
+.navbar .box .mode {
   width: 30px;
   height: 30px;
   display: flex;
@@ -166,13 +161,11 @@ body {
   padding: 0 7vw;
   overflow-x: hidden;
 }
-.main-box
-{
+.main-box {
   position: absolute;
   width: min-content;
   top: 50%;
   transform: translateY(-50%);
-
 }
 .main-title {
   font-size: calc(var(--index) * 5);
@@ -265,11 +258,8 @@ body {
   font-family: "Perpetua Titling MT";
   font-weight: 400;
 }
-html[lang="ar"] .text-block__p
-{
-  font-family: 'Cairo', sans-serif;
-
-
+html[lang="ar"] .text-block__p {
+  font-family: "Cairo", sans-serif;
 }
 .gallery__item.height {
   /* height: 250px;
@@ -378,11 +368,8 @@ html[lang="ar"] .text-block__p
   min-width: 250px;
   font-family: "Perpetua Titling MT";
 }
-html[lang="ar"] .info
-{
-  font-family: 'Cairo', sans-serif;
-
-
+html[lang="ar"] .info {
+  font-family: "Cairo", sans-serif;
 }
 /* Title of the card */
 .timeline .title {
@@ -634,6 +621,7 @@ html[lang="ar"] .info
 .iconpad {
   padding: 12px 0;
   width: 100%;
+  text-align: center;
 }
 
 .process-scetion .slider-nav-item {
@@ -876,6 +864,7 @@ html[lang="ar"] .info
   padding-top: 80px;
   margin-top: 60px;
   font-size: 3rem;
+  text-align: center;
 }
 
 .services {
@@ -1276,8 +1265,7 @@ html[lang="ar"] .info
   display: none;
 }
 @media (max-width: 992px) {
-  .hero
-  {
+  .hero {
     top: -40px;
   }
   .gallery > * {
@@ -1290,19 +1278,17 @@ html[lang="ar"] .info
     display: none;
   }
   #google_translate_element select,
-  #google_translate_element1 select
-  {
+  #google_translate_element1 select {
     display: none;
   }
-  .links .language{
-      display: block !important; 
-      border: 0.5px solid #ffffff4a !important;
-      backdrop-filter: none !important;
+  .links .language {
+    display: block !important;
+    border: 0.5px solid #ffffff4a !important;
+    backdrop-filter: none !important;
   }
   .links #google_translate_element select,
-  .links #google_translate_element1 select
-  {
-    display: block !important; 
+  .links #google_translate_element1 select {
+    display: block !important;
     border: 0.5px solid #ffffff4a !important;
     backdrop-filter: none !important;
   }
@@ -1321,11 +1307,10 @@ html[lang="ar"] .info
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
   }
-  body.light .links 
-  {
+  body.light .links {
     background: rgba(255, 255, 255, 1);
-  backdrop-filter: none;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   }
   .links.active {
     transform: translateX(0);
@@ -1389,138 +1374,138 @@ html[lang="ar"] .info
   .architeture .services li.gallery__item {
     min-width: 100%;
   }
+  .services h2 {
+    font-size: 2rem;
+  }
+  .advertising .services li.gallery__item {
+    width: 100%;
+  }
 }
 /* Light Mode */
-body.light
-{
+body.light {
   background-image: url(../images/bgLight.png);
   color: #1e1e1c;
   --color-header: #312e2e;
   --color-text: #333;
 }
-body.light .services li .title
-{
+body.light .services li .title {
   background-color: #fff;
-  box-shadow: 0  0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
-body.light .navbar .container img
-{
+body.light .navbar .container img {
   filter: none;
 }
 
-body.light .services h2
-{
-  color: var(--color-header)
+body.light .services h2 {
+  color: var(--color-header);
 }
 body.light .social-icons a,
 body.light .navbar .links a,
 body.light .navbar button.language,
 body.light .navbar #google_translate_element select,
-body.light .navbar #google_translate_element1 select
-{
+body.light .navbar #google_translate_element1 select {
   color: var(--color-text);
 }
 body.light .navbar button.language,
 body.light .navbar #google_translate_element select,
 body.light .navbar #google_translate_element1 select,
-body.light .navbar.blur
-{
+body.light .navbar.blur {
   background: rgba(255, 255, 255, 1);
   backdrop-filter: none;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
-body.light .navbar
-{
-  background: rgba(255, 255, 255, .3);
-
+body.light .navbar {
+  background: rgba(255, 255, 255, 0.3);
 }
-body.light .iconscontainer .icon
-{
-  box-shadow:  none;
+body.light .iconscontainer .icon {
+  box-shadow: none;
 }
-body.light .studio .form__field ,
+body.light .studio .form__field,
 body.light .studio select,
-body.light .studio button
-{
-  border-color:  rgb(50 50 93 / 10%);
-  
+body.light .studio button {
+  border-color: rgb(50 50 93 / 10%);
 }
 iframe,
-.skiptranslate > :not(div) 
-{
+.skiptranslate > :not(div) {
   display: none;
 } /*hide google translate link | logo | banner-frame */
-  .goog-logo-link,.gskiptranslate,.goog-te-gadget span,.goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame,div#goog-gt-{
-    display: none!important;
-  }
-  .goog-te-gadget {
-    color: transparent!important;
-    font-size:0px;
-  }
+.goog-logo-link,
+.gskiptranslate,
+.goog-te-gadget span,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+div#goog-gt- {
+  display: none !important;
+}
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0px;
+}
 
-  .goog-text-highlight {
-    background: none !important;
-    box-shadow: none !important;
-  }
-   
- /*google translate Dropdown */
- 
- #google_translate_element select{
- /* background:#f6edfd;
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/*google translate Dropdown */
+
+#google_translate_element select {
+  /* background:#f6edfd;
  color:#383ffa; */
- border: none;
- border-radius:3px;
- padding:6px 8px
- }
-  /*hide google translate link | logo | banner-frame */
-  .goog-logo-link,.gskiptranslate,.goog-te-gadget span,.goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame,div#goog-gt-{
-    display: none!important;
-  }
-  .goog-te-gadget {
-    color: transparent!important;
-    font-size:0px;
-  }
+  border: none;
+  border-radius: 3px;
+  padding: 6px 8px;
+}
+/*hide google translate link | logo | banner-frame */
+.goog-logo-link,
+.gskiptranslate,
+.goog-te-gadget span,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+div#goog-gt- {
+  display: none !important;
+}
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0px;
+}
 
-  .goog-text-highlight {
-    background: none !important;
-    box-shadow: none !important;
-  }
-   
- /*google translate Dropdown */
- 
- #google_translate_element select,
- #google_translate_element1 select {
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
 
- border: none;
- border-radius:3px;
- padding:6px 8px;
- background-color: transparent;
- outline: none;
- border: none;
- color: #fff;
- font-size: 1.1rem;
- border-radius: 3px;
- backdrop-filter: blur(20px);
- cursor: pointer;
- background-color: #222;
+/*google translate Dropdown */
+
+#google_translate_element select,
+#google_translate_element1 select {
+  border: none;
+  border-radius: 3px;
+  padding: 6px 8px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  background-color: #222;
 }
 body.light #google_translate_element select,
-body.light #google_translate_element1 select
-{
-   background-color: #fff;
-
- } 
- /* Lang  */
- html[lang="en"]
- {
+body.light #google_translate_element1 select {
+  background-color: #fff;
+}
+/* Lang  */
+html[lang="en"] {
   direction: ltr;
- }
- html[lang="ar"]
- {
-   direction: rtl;
-  }
-  html[lang="ar"] .hero
-  {
-    right:  auto;
-    left: 0;
-  }
+}
+html[lang="ar"] {
+  direction: rtl;
+}
+html[lang="ar"] .hero {
+  right: auto;
+  left: 0;
+}
